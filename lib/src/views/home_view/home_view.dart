@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tractor/src/controller/components/custom_Text.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -24,7 +25,8 @@ class HomeView extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-              Icon(Icons.add,color: Colors.white,)
+              Icon(Icons.add,color: Colors.white,size: width*.2,),
+              BoldText(text: 'Enter Your Data',color: Colors.white,),
             ],),
           )
 

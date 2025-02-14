@@ -36,7 +36,7 @@ class BoldText extends StatelessWidget {
 
  BoldText({super.key,
     required this.text,
-    this.fontSize=18,
+    this.fontSize=20,
     this.fontWeight=FontWeight.bold,
     this.color=Colors.black,
 
