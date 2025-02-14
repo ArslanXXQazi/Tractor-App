@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tractor/src/controller/components/custom_Text.dart';
 import 'package:tractor/src/controller/components/home_container.dart';
+import 'package:tractor/src/views/fetch_view/fetch_view.dart';
 import 'package:tractor/src/views/insert_view/insert_view.dart';
 
 class HomeView extends StatelessWidget {
@@ -25,7 +26,9 @@ class HomeView extends StatelessWidget {
                 text: "Enter Your Data"),
             SizedBox(height: height*.05,),
             HomeContainer(
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context, CupertinoPageRoute(builder: (context)=>FetchView()));
+                },
                 iconData: Icons.remove_red_eye,
                 text: "View Your Data",
                 color: Colors.blue,
