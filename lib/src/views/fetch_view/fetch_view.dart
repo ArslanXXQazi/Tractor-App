@@ -37,7 +37,10 @@ class _FetchViewState extends State<FetchView> {
             price: 'price',
             total_price: noteMap['total_price']);
       }).toList();
-      
+      setState(() {});
+    }
+    catch(e) {
+      print('error$e');
     }
   }
 
