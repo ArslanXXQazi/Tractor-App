@@ -11,5 +11,5 @@ class InsertController extends GetxController
   TextEditingController totalPriceController=TextEditingController();
   TextEditingController dateController=TextEditingController();
 
-
+  
 }
