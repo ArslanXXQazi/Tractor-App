@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tractor/src/views/home_view/home_view.dart';
 
 
 class SplashView extends StatefulWidget {
@@ -15,9 +16,11 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Navigator.pushReplacement(context, CupertinoPageRoute(builder: (context)=>));
+    Future.delayed(Duration(seconds: 3),(){
+      Navigator.pushReplacement(context, CupertinoPageRoute(builder: (context)=>HomeView()));
+    });
   }
-  
+
 
   @override
   Widget build(BuildContext context) {
