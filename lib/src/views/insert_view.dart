@@ -15,25 +15,14 @@ class InsertView extends StatelessWidget {
         title: BoldText(text: "Enter Your Data"),
         centerTitle: true,
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-        CustomText(text: 'Enter Your Name'),
-        SizedBox(height: height*.01,),
-        TextFormField(
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: Colors.orange),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: Colors.grey),
-            ),
-          ),
-        )
-      ],),
+      body: Padding(
+        padding:  EdgeInsets.symmetric(horizontal: width*.03,vertical: height*.02),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+
+        ],),
+      ),
     );
   }
 }
