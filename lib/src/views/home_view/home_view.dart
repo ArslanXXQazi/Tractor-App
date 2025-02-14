@@ -8,20 +8,26 @@ class HomeView extends StatelessWidget {
    final height= MediaQuery.sizeOf(context).height;
    final width= MediaQuery.sizeOf(context).width;
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
 
-        children: [
-        Container
-          (
-          height: height*.3,
-          width: width*.8,
-          decoration: BoxDecoration(
-            color: Colors.green,
-          ),
-        )
+          children: [
+          Container
+            (
+            height: height*.35,
+            width: width*.8,
+            decoration: BoxDecoration(
+              color: Colors.green,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Center(child: Column(children: [
+              Icon(Icons.add,color: Colors.white,)
+            ],),),
+          )
 
-      ],),
+        ],),
+      ),
     );
   }
 }
