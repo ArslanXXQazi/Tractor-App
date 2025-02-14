@@ -21,9 +21,11 @@ class HomeView extends StatelessWidget {
               color: Colors.green,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Center(child: Column(children: [
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
               Icon(Icons.add,color: Colors.white,)
-            ],),),
+            ],),
           )
 
         ],),
