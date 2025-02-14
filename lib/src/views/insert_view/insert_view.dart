@@ -60,8 +60,7 @@ class InsertView extends StatelessWidget {
                   ),
                 ),
                 child: BoldText(text: 'Add Data',color: Colors.white,))
-
-
+            
         ],),
       ),
     );
