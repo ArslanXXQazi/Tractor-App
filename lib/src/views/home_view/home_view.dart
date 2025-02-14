@@ -5,8 +5,21 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+   final height= MediaQuery.sizeOf(context).height;
+   final width= MediaQuery.sizeOf(context).width;
     return Scaffold(
-      body: Column(children: [],),
+      body: Column(children: [
+
+        Container
+          (
+          height: height*3,
+          width: width*.8,
+          decoration: BoxDecoration(
+            
+          ),
+        )
+
+      ],),
     );
   }
 }
