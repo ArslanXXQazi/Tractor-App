@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tractor/src/controller/components/custom_Text.dart';
 import 'package:tractor/src/controller/components/home_container.dart';
+import 'package:tractor/src/views/insert_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -16,7 +18,9 @@ class HomeView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             HomeContainer(
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context, CupertinoPageRoute(builder: (context)=>InsertView()));
+                },
                 iconData: Icons.add,
                 text: "Enter Your Data"),
             SizedBox(height: height*.05,),
