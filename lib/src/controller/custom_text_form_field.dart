@@ -18,24 +18,32 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     final height= MediaQuery.sizeOf(context).height;
     final width= MediaQuery.sizeOf(context).width;
-    return Column(children: [
-      CustomText(text: text),
-      SizedBox(height: height*.01,),
-      TextFormField(
-        controller: controller,
-        decoration: InputDecoration(
-          border: InputBorder.none,
-          hintText: hintText,
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.orange),
+    return Padding(
+      padding:  EdgeInsets.symmetric(vertical: height*.01),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+        CustomText(text: text,color: Colors.blue,),
+        SizedBox(height: height*.01,),
+        TextFormField(
+          controller: controller,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            hintText: hintText,
+            hintStyle: TextStyle(
+              color: Colors.grey
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+              borderSide: BorderSide(color: Colors.orange),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+              borderSide: BorderSide(color: Colors.grey),
+            ),
           ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.grey),
-          ),
-        ),
-      )
-    ],);
+        )
+      ],),
+    );
   }
 }
