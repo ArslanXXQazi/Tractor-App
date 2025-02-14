@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -25,7 +26,6 @@ class InsertView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             CustomTextFormField(
                 text: "Enter Your Name",
                 hintText: "Enter Your Name",
@@ -49,9 +49,17 @@ class InsertView extends StatelessWidget {
                   controller: insertController.totalPriceController
               ),),
             ],),
+            SizedBox(height: height*.02,),
             ElevatedButton(
                 onPressed: (){},
-                child: CustomText(text: 'Add Data'))
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: CupertinoColors.activeGreen,
+                  minimumSize: Size(width*1, height*.07),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                child: BoldText(text: 'Add Data',color: Colors.white,))
 
 
         ],),
