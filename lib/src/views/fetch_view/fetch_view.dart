@@ -19,6 +19,7 @@ class _FetchViewState extends State<FetchView> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    fetchData();
   }
 
   fetchData()
@@ -54,19 +55,26 @@ class _FetchViewState extends State<FetchView> {
         centerTitle: true,
         title: BoldText(text: 'Customar Detail'),
       ),
-      body: ListView.builder(
+      body: data.isEmpty?Center(child: BoldText(text: "No Data Found"),):
+      ListView.builder(
         itemCount: data.length,
         itemBuilder: (context,index){
-          return Container(
-            height: height*.3,
-            width: width*.8,
-            decoration: BoxDecoration(
-              color: Colors.grey.shade200,
-              borderRadius: BorderRadius.circular(20),
+          return Padding(
+            padding:EdgeInsets.symmetric(vertical: height*.02,horizontal: width*.02),
+            child: Container(
+              height: height*.3,
+              width: width*1,
+              decoration: BoxDecoration(
+                color: Colors.grey.shade200,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(children: [
+                CustomText(text: data[index].customar_name??""),
+                CustomText(text: data[index].price??""),
+                CustomText(text: data[index].total_price??""),
+                CustomText(text: data[index].time??""),
+              ],),
             ),
-            child: Column(children: [
-              
-            ],),
           );
         },
       ),
