@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tractor/src/controller/components/custom_Text.dart';
 import 'package:tractor/src/controller/components/home_container.dart';
-import 'package:tractor/src/views/insert_view.dart';
+import 'package:tractor/src/views/insert_view/insert_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
