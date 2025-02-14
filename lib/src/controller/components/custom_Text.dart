@@ -46,7 +46,7 @@ class BoldText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.aBeeZee(
+      style: GoogleFonts.merriweather(
         fontSize:fontSize ,
         fontWeight:fontWeight ,
         color: color,
