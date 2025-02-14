@@ -6,6 +6,8 @@ class InsertView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height= MediaQuery.sizeOf(context).height;
+    final width= MediaQuery.sizeOf(context).width;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -13,14 +15,22 @@ class InsertView extends StatelessWidget {
         title: BoldText(text: "Enter Your Data"),
         centerTitle: true,
       ),
-      body: Column(children: [
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+        CustomText(text: 'Enter Your Name'),
+        SizedBox(height: height*.01,),
         TextFormField(
           decoration: InputDecoration(
             border: InputBorder.none,
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              
-            )
+              borderSide: BorderSide(color: Colors.orange),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+              borderSide: BorderSide(color: Colors.grey),
+            ),
           ),
         )
       ],),
