@@ -5,7 +5,8 @@ class HomeContainer extends StatelessWidget {
   IconData iconData;
   String text;
   VoidCallback onTap;
-   HomeContainer({super.key,required this.onTap,required this.iconData,required this.text});
+  Color color;
+   HomeContainer({super.key,required this.onTap,required this.iconData,required this.text,this.color=Colors.green});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class HomeContainer extends StatelessWidget {
         height: height*.35,
         width: width*.8,
         decoration: BoxDecoration(
-          color: Colors.green,
+          color: color,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
