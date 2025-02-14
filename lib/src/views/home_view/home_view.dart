@@ -14,21 +14,7 @@ class HomeView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
 
           children: [
-          Container
-            (
-            height: height*.35,
-            width: width*.8,
-            decoration: BoxDecoration(
-              color: Colors.green,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-              Icon(Icons.add,color: Colors.white,size: width*.2,),
-              BoldText(text: 'Enter Your Data',color: Colors.white,),
-            ],),
-          )
+
 
         ],),
       ),
