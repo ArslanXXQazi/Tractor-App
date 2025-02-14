@@ -30,6 +30,14 @@ class _FetchViewState extends State<FetchView> {
         {
           print("No data found in the database.");
         }
+      data= fetchDataList.map((noteMap){
+        return MainModel(
+            customar_name: noteMap['customar_name'],
+            time: noteMap['time'],
+            price: 'price',
+            total_price: noteMap['total_price']);
+      }).toList();
+      
     }
   }
 
