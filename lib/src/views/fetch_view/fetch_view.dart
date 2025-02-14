@@ -44,14 +44,31 @@ class _FetchViewState extends State<FetchView> {
     }
   }
 
-
   Widget build(BuildContext context) {
+    final height = MediaQuery.sizeOf(context).height;
+    final width = MediaQuery.sizeOf(context).width;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
         title: BoldText(text: 'Customar Detail'),
+      ),
+      body: ListView.builder(
+        itemCount: data.length,
+        itemBuilder: (context,index){
+          return Container(
+            height: height*.3,
+            width: width*.8,
+            decoration: BoxDecoration(
+              color: Colors.grey.shade200,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Column(children: [
+              
+            ],),
+          );
+        },
       ),
     );
   }
