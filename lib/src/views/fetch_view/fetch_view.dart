@@ -15,6 +15,23 @@ class _FetchViewState extends State<FetchView> {
   DbClass dbClass=DbClass.instance;
   List<MainModel> data = [];
 
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  fetchData()
+  async{
+    try
+    {
+      var fetchDataList = await dbClass.read();
+      if(fetchDataList.isEmpty)
+        {
+          print("No data found in the database.");
+        }
+    }
+  }
 
 
   Widget build(BuildContext context) {
