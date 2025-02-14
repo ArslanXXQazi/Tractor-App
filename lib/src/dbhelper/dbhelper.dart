@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
+import 'package:tractor/src/model/main_model.dart';
 
 class DbClass{
 
@@ -36,7 +37,27 @@ class DbClass{
        total_price integer
       )
       '''
-    ); 
+    );
   }
+
+ modelCreate(MainModel model)
+ async{
+    Database db= await instance.database;
+    final data={
+      'cutomar_name': model.customar_name,
+      'time'        :model.time,
+      'price'       :model.price,
+      'total_price' :model.total_price
+    };
+    var check= await db.insert('tractor', data);
+    if(check==null)
+    {
+      print("Data din,t not inserted");
+    }
+    else
+      {
+      print("Data added successfully");
+      }
+ }
 
 }
