@@ -40,11 +40,11 @@ class DbClass{
     );
   }
 
- modelCreate(MainModel model)
+ Future<int> modelCreate(MainModel model)
  async{
     Database db= await instance.database;
     final data={
-      'cutomar_name': model.customar_name,
+      'customar_name': model.customar_name,
       'time'        :model.time,
       'price'       :model.price,
       'total_price' :model.total_price
@@ -53,10 +53,12 @@ class DbClass{
     if(check==null)
     {
       print("Data din,t not inserted");
+      return 0;
     }
     else
       {
       print("Data added successfully");
+      return 1;
       }
  }
 
