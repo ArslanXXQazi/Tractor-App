@@ -11,7 +11,19 @@ class InsertView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: BoldText(text: "Enter Your Data"),
+        centerTitle: true,
       ),
+      body: Column(children: [
+        TextFormField(
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+              
+            )
+          ),
+        )
+      ],),
     );
   }
 }
