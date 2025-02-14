@@ -62,4 +62,11 @@ class DbClass{
       }
  }
 
+  Future<List<Map<String,dynamic>>> read()async
+  {
+    Database db=await instance.database;
+    List<Map<String,dynamic>> result = await db.query('questions');
+    return result;
+  }
+
 }
