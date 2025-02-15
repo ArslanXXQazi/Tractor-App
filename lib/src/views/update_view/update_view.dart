@@ -38,7 +38,6 @@ class UpdateView extends StatelessWidget {
     updateController.timeController.text = time;
     updateController.priceController.text = price;
     updateController.totalPriceController.text = total_price;
-    updateController.dateController.text = date ?? "";
     updateController.descriptionController.text = description;
 
 

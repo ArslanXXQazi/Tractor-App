@@ -27,13 +27,13 @@ class UpdateController extends GetxController
       time: timeController.text,
       price: priceController.text,
       total_price: totalPriceController.text,
-      date: dateController.text,
       description: descriptionController.text,
     );
 
     int result = await dbClass.updateData(id: id, model: updatedModel);
 
     if (result > 0) {
+
       Get.snackbar("Success", "Data Updated Successfully", backgroundColor: Colors.green, colorText: Colors.white);
       Get.back(); // Update hone ke baad wapas FetchView pe chale jaye
     } else {
