@@ -106,7 +106,7 @@ DbClass dbClass=DbClass.instance;
                 Expanded(child:  CustomTextFormField(
                     text: "Total Price",
                     hintText: "Enter Total Price",
-                    controller: updateController.totalPriceController
+                    controller: totalPriceController
                 ),),
               ],),
               CustomTextFormField(
