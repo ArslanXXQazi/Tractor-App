@@ -117,7 +117,7 @@ class _FetchViewState extends State<FetchView> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                      BoldText(text: "Total Price : ",fontSize: 16,),
+                      BoldText(text: "Total Price : ",fontSize: 15,),
                       CustomText(text: data[index].total_price??""),
                     ],),
                       SizedBox(height: height*.01,),
