@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:tractor/src/controller/components/custom_Text.dart';
 import 'package:tractor/src/date_time_helper/date_time_helper.dart';
 import 'package:tractor/src/dbhelper/dbhelper.dart';
@@ -67,12 +69,22 @@ class _FetchViewState extends State<FetchView> {
           return Padding(
             padding:EdgeInsets.symmetric(vertical: height*.02,horizontal: width*.03),
             child: GestureDetector(
-              onTap: (){
-                // dbClass.deleteData(data[index].id!);
-                // setState(() {
-                //   data.removeAt(index);
-                // });
-              },
+             onLongPress: (){
+
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context){
+                    return AlertDialog(
+                      
+                    );
+                  }
+              );
+
+               // dbClass.deleteData(data[index].id!);
+               // setState(() {
+               //   data.removeAt(index);
+               // });
+             },
               child: Container(
                 width: width*1,
                 decoration: BoxDecoration(
