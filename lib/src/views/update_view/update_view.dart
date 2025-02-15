@@ -66,7 +66,7 @@ DbClass dbClass=DbClass.instance;
           total_price: totalPriceController.text,
           description: descriptionController.text,
       ) );
-  Navigator.pop(context);
+  Navigator.pop(context,true);
   }
 
   Widget build(BuildContext context) {
@@ -117,7 +117,7 @@ DbClass dbClass=DbClass.instance;
               SizedBox(height: height*.02,),
               CustomButton(
                   onTap: (){
-                   
+                   updateData();
                   },
                   text: "Update Data")
             ],),

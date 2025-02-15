@@ -73,7 +73,6 @@ class _FetchViewState extends State<FetchView> {
             padding:EdgeInsets.symmetric(vertical: height*.02,horizontal: width*.03),
             child: GestureDetector(
              onLongPress: (){
-
               showDialog(
                   context: context,
                   builder: (BuildContext context){
@@ -94,6 +93,7 @@ class _FetchViewState extends State<FetchView> {
                           SizedBox(width: width*.05,),
                           Expanded(child: CustomButton(
                               onTap: (){
+                                Navigator.pop(context);
                                 Navigator.push(context, CupertinoPageRoute(builder: (context)=>UpdateView(
                                   id: data[index].id!,
                                   customar_name: data[index].customar_name ?? "",
@@ -102,7 +102,13 @@ class _FetchViewState extends State<FetchView> {
                                   total_price: data[index].total_price ?? "",
                                   date: data[index].date ?? "",
                                   description: data[index].description ?? "",
-                                )));
+                                )
+                                )
+                                ).then((updated){
+                                  if(updated==true){
+                                    fetchData();
+                                  }
+                                });
                               },
                               text: 'Update')),
                         ],)
