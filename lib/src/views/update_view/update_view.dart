@@ -8,7 +8,7 @@ import 'package:tractor/src/controller/components/custom_text_form_field.dart';
 import 'package:tractor/src/views/insert_view/insert_controller.dart';
 import 'package:tractor/src/views/update_view/update_controller.dart';
 
-class UpdateView extends StatelessWidget {
+class UpdateView extends StatefulWidget {
 
   String customar_name;
   String time;
@@ -29,18 +29,40 @@ class UpdateView extends StatelessWidget {
    });
 
   @override
+  State<UpdateView> createState() => _UpdateViewState();
+}
+
+class _UpdateViewState extends State<UpdateView> {
+  @override
+
+  TextEditingController nameController=       TextEditingController();
+  TextEditingController timeController=       TextEditingController();
+  TextEditingController priceController=      TextEditingController();
+  TextEditingController totalPriceController= TextEditingController();
+  TextEditingController descriptionController=TextEditingController();
+
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    nameController.text=widget.customar_name;
+    timeController.text=widget.time;
+    priceController.text=widget.price;
+    totalPriceController.text=widget.total_price;
+
+  }
+
+
+
+
+
+
+
   Widget build(BuildContext context) {
     final height= MediaQuery.sizeOf(context).height;
     final width= MediaQuery.sizeOf(context).width;
-   UpdateController updateController=Get.put(UpdateController());
-
-   updateController.nameController.text=customar_name;
-    updateController.timeController.text = time;
-    updateController.priceController.text = price;
-    updateController.totalPriceController.text = total_price;
-    updateController.descriptionController.text = description;
-
-
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -86,7 +108,7 @@ class UpdateView extends StatelessWidget {
               SizedBox(height: height*.02,),
               CustomButton(
                   onTap: (){
-                    updateController.updateData(id);
+                    updateController.updateData(widget.id);
                   },
                   text: "Update Data")
             ],),
