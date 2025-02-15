@@ -9,7 +9,24 @@ import 'package:tractor/src/views/insert_view/insert_controller.dart';
 import 'package:tractor/src/views/update_view/update_controller.dart';
 
 class UpdateView extends StatelessWidget {
-  const UpdateView({super.key});
+
+  String customar_name;
+  String time;
+  String price;
+  String total_price;
+  int?  id;
+  String? date;
+  String description;
+
+   UpdateView({super.key,
+     required this.customar_name,
+     required this.time,
+     required this.price,
+     required this.total_price,
+     this.id,
+     this.date,
+     required this.description,
+   });
 
   @override
   Widget build(BuildContext context) {

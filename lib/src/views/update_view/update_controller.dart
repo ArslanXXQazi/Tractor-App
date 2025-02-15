@@ -17,4 +17,6 @@ class UpdateController extends GetxController
   var isLoading = false.obs;
 
 
+
+
 }
