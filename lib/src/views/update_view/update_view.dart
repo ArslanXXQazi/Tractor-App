@@ -6,6 +6,7 @@ import 'package:tractor/src/controller/components/custom_Text.dart';
 import 'package:tractor/src/controller/components/custom_button.dart';
 import 'package:tractor/src/controller/components/custom_text_form_field.dart';
 import 'package:tractor/src/views/insert_view/insert_controller.dart';
+import 'package:tractor/src/views/update_view/update_controller.dart';
 
 class UpdateView extends StatelessWidget {
   const UpdateView({super.key});
@@ -14,7 +15,7 @@ class UpdateView extends StatelessWidget {
   Widget build(BuildContext context) {
     final height= MediaQuery.sizeOf(context).height;
     final width= MediaQuery.sizeOf(context).width;
-    InsertController insertController= Get.put(InsertController());
+   UpdateController updateController=Get.put(UpdateController());
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -31,31 +32,31 @@ class UpdateView extends StatelessWidget {
               CustomTextFormField(
                   text: "Name",
                   hintText: "Enter Name",
-                  controller: insertController.nameController
+                  controller: updateController.nameController
               ),
               CustomTextFormField(
                   text: "Time",
                   hintText: "Enter Time",
-                  controller: insertController.timeController
+                  controller: updateController.timeController
               ),
               Row(children: [
                 Expanded(child:  CustomTextFormField(
                     text: "Price",
                     hintText: "Enter Price",
-                    controller: insertController.priceController
+                    controller: updateController.priceController
                 ),),
                 SizedBox(width: width*.02,),
                 Expanded(child:  CustomTextFormField(
                     text: "Total Price",
                     hintText: "Enter Total Price",
-                    controller: insertController.totalPriceController
+                    controller: updateController.totalPriceController
                 ),),
               ],),
               CustomTextFormField(
                   text: "Description",
                   hintText: "Descriptions...",
                   maxLines: 3,
-                  controller: insertController.descriptionController),
+                  controller: updateController.descriptionController),
               SizedBox(height: height*.02,),
               CustomButton(
                   onTap: (){},
