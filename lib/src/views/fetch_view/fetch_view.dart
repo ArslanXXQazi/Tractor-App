@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:tractor/src/controller/components/custom_Text.dart';
+import 'package:tractor/src/controller/components/custom_button.dart';
 import 'package:tractor/src/date_time_helper/date_time_helper.dart';
 import 'package:tractor/src/dbhelper/dbhelper.dart';
 import 'package:tractor/src/model/main_model.dart';
@@ -78,17 +79,23 @@ class _FetchViewState extends State<FetchView> {
                       title: BoldText(text: 'Are you sure to want these changes',fontSize: 15,),
                       actions: [
                         Row(children: [
-                          Expanded(child: )
+                          Expanded(child: CustomButton(onTap: ()
+                          {
+                            Navigator.pop(context);
+                            dbClass.deleteData(data[index].id!);
+                            setState(() {
+                              data.removeAt(index);
+                            });
+                          },
+                            text: 'Delete',
+                            color: Colors.red,)),
+                          SizedBox(width: width*.05,),
+                          Expanded(child: CustomButton(onTap: (){}, text: 'Update')),
                         ],)
                       ],
                     );
                   }
               );
-
-               // dbClass.deleteData(data[index].id!);
-               // setState(() {
-               //   data.removeAt(index);
-               // });
              },
               child: Container(
                 width: width*1,
