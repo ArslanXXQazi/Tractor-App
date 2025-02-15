@@ -33,8 +33,10 @@ class DbClass{
        id integer primary key,
        customar_name text,
        time  text,
-       price integer,
-       total_price integer
+       price text,
+       total_price text,
+       date  text,
+       description text
       )
       '''
     );
@@ -47,7 +49,9 @@ class DbClass{
       'customar_name': model.customar_name,
       'time'        :model.time,
       'price'       :model.price,
-      'total_price' :model.total_price
+      'total_price' :model.total_price,
+      'description' :model.description,
+      'date'        :model.date??DateTime.now().toString(),
     };
     var check= await db.insert('tractor', data);
     if(check==null)
@@ -67,6 +71,11 @@ class DbClass{
     Database db=await instance.database;
     List<Map<String,dynamic>> result = await db.query('tractor');
     return result;
+  }
+
+  Future<int> deleteData(int id) async {
+    Database db = await instance.database;
+    return await db.delete('tractor', where: 'id=?', whereArgs: [id]);
   }
 
 }

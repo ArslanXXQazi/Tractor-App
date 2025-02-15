@@ -12,6 +12,7 @@ class InsertController extends GetxController
   TextEditingController priceController=TextEditingController();
   TextEditingController totalPriceController=TextEditingController();
   TextEditingController dateController=TextEditingController();
+  TextEditingController descriptionController=TextEditingController();
 
   var isLoading = false.obs;
 
@@ -31,7 +32,8 @@ class InsertController extends GetxController
             customar_name: nameController.text,
             time: timeController.text,
             price: priceController.text,
-            total_price: totalPriceController.text
+            total_price: totalPriceController.text,
+            description: descriptionController.text
         );
 
         int check= await dbClass.modelCreate(model);

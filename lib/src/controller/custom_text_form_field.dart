@@ -6,12 +6,13 @@ class CustomTextFormField extends StatelessWidget {
   String text;
   String hintText;
   TextEditingController controller;
-
+  int maxLines;
 
    CustomTextFormField({super.key,
      required this.text,
      required this.hintText,
      required this.controller,
+     this.maxLines=1
    });
 
   @override
@@ -26,6 +27,7 @@ class CustomTextFormField extends StatelessWidget {
         CustomText(text: text,color: Colors.blue,),
         SizedBox(height: height*.01,),
         TextFormField(
+          maxLines: maxLines,
           controller: controller,
           decoration: InputDecoration(
             border: InputBorder.none,

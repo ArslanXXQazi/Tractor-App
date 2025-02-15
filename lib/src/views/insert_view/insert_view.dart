@@ -23,51 +23,57 @@ class InsertView extends StatelessWidget {
       ),
       body: Padding(
         padding:  EdgeInsets.symmetric(horizontal: width*.03,vertical: height*.02),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomTextFormField(
-                text: "Enter Your Name",
-                hintText: "Enter Your Name",
-                controller: insertController.nameController
-            ),
-            CustomTextFormField(
-                text: "Enter Time",
-                hintText: "Enter Time",
-                controller: insertController.timeController
-            ),
-            Row(children: [
-              Expanded(child:  CustomTextFormField(
-                  text: "Enter Price",
-                  hintText: "Enter Price",
-                  controller: insertController.priceController
-              ),),
-              SizedBox(width: width*.02,),
-              Expanded(child:  CustomTextFormField(
-                  text: "Enter Total Price",
-                  hintText: "Enter Total Price",
-                  controller: insertController.totalPriceController
-              ),),
-            ],),
-            SizedBox(height: height*.02,),
-            Obx((){
-              return insertController.isLoading.value?Center(child: CircularProgressIndicator()):
-              ElevatedButton(
-                  onPressed: ()
-                  {
-                    insertController.insertData();
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: CupertinoColors.activeGreen,
-                    minimumSize: Size(width*1, height*.07),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomTextFormField(
+                  text: "Name",
+                  hintText: "Enter Name",
+                  controller: insertController.nameController
+              ),
+              CustomTextFormField(
+                  text: "Time",
+                  hintText: "Enter Time",
+                  controller: insertController.timeController
+              ),
+              Row(children: [
+                Expanded(child:  CustomTextFormField(
+                    text: "Price",
+                    hintText: "Enter Price",
+                    controller: insertController.priceController
+                ),),
+                SizedBox(width: width*.02,),
+                Expanded(child:  CustomTextFormField(
+                    text: "Total Price",
+                    hintText: "Enter Total Price",
+                    controller: insertController.totalPriceController
+                ),),
+              ],),
+              CustomTextFormField(
+                  text: "Description",
+                  hintText: "Descriptions...",
+                  maxLines: 3,
+                  controller: insertController.descriptionController),
+              SizedBox(height: height*.02,),
+              Obx((){
+                return insertController.isLoading.value?Center(child: CircularProgressIndicator()):
+                ElevatedButton(
+                    onPressed: ()
+                    {
+                      insertController.insertData();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: CupertinoColors.activeGreen,
+                      minimumSize: Size(width*1, height*.07),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                     ),
-                  ),
-                  child: BoldText(text: 'Add Data',color: Colors.white,));
-            })
-
-        ],),
+                    child: BoldText(text: 'Add Data',color: Colors.white,));
+              })
+          ],),
+        ),
       ),
     );
   }
