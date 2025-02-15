@@ -41,8 +41,6 @@ class _UpdateViewState extends State<UpdateView> {
   TextEditingController totalPriceController= TextEditingController();
   TextEditingController descriptionController=TextEditingController();
 
-
-
   @override
   void initState() {
     // TODO: implement initState
@@ -51,14 +49,11 @@ class _UpdateViewState extends State<UpdateView> {
     timeController.text=widget.time;
     priceController.text=widget.price;
     totalPriceController.text=widget.total_price;
+    descriptionController.text=widget.description;
 
   }
 
-
-
-
-
-
+  
 
   Widget build(BuildContext context) {
     final height= MediaQuery.sizeOf(context).height;
