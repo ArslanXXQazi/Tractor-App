@@ -54,7 +54,7 @@ class DbClass{
       'date'        :model.date??DateTime.now().toString(),
     };
     var check= await db.insert('tractor', data);
-    if(check==null)
+    if(check==0)
     {
       print("Data din,t not inserted");
       return 0;
