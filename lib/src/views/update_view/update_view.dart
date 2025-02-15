@@ -14,7 +14,7 @@ class UpdateView extends StatelessWidget {
   String time;
   String price;
   String total_price;
-  int?  id;
+  int  id;
   String? date;
   String description;
 
@@ -23,7 +23,7 @@ class UpdateView extends StatelessWidget {
      required this.time,
      required this.price,
      required this.total_price,
-     this.id,
+     required this.id,
      this.date,
      required this.description,
    });
@@ -33,6 +33,16 @@ class UpdateView extends StatelessWidget {
     final height= MediaQuery.sizeOf(context).height;
     final width= MediaQuery.sizeOf(context).width;
    UpdateController updateController=Get.put(UpdateController());
+
+   updateController.nameController.text=customar_name;
+    updateController.timeController.text = time;
+    updateController.priceController.text = price;
+    updateController.totalPriceController.text = total_price;
+    updateController.dateController.text = date ?? "";
+    updateController.descriptionController.text = description;
+
+
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -76,7 +86,9 @@ class UpdateView extends StatelessWidget {
                   controller: updateController.descriptionController),
               SizedBox(height: height*.02,),
               CustomButton(
-                  onTap: (){},
+                  onTap: (){
+                    updateController.updateData(id);
+                  },
                   text: "Update Data")
             ],),
         ),

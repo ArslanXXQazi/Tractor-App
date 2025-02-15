@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -6,6 +7,7 @@ import 'package:tractor/src/controller/components/custom_button.dart';
 import 'package:tractor/src/date_time_helper/date_time_helper.dart';
 import 'package:tractor/src/dbhelper/dbhelper.dart';
 import 'package:tractor/src/model/main_model.dart';
+import 'package:tractor/src/views/update_view/update_view.dart';
 
 class FetchView extends StatefulWidget {
   const FetchView({super.key});
@@ -90,7 +92,19 @@ class _FetchViewState extends State<FetchView> {
                             text: 'Delete',
                             color: Colors.red,)),
                           SizedBox(width: width*.05,),
-                          Expanded(child: CustomButton(onTap: (){}, text: 'Update')),
+                          Expanded(child: CustomButton(
+                              onTap: (){
+                                Navigator.push(context, CupertinoPageRoute(builder: (context)=>UpdateView(
+                                  id: data[index].id!,
+                                  customar_name: data[index].customar_name ?? "",
+                                  time: data[index].time ?? "",
+                                  price: data[index].price ?? "",
+                                  total_price: data[index].total_price ?? "",
+                                  date: data[index].date ?? "",
+                                  description: data[index].description ?? "",
+                                )));
+                              },
+                              text: 'Update')),
                         ],)
                       ],
                     );

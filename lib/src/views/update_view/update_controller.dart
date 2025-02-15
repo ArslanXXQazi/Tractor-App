@@ -16,6 +16,7 @@ class UpdateController extends GetxController
 
   var isLoading = false.obs;
 
+  DbClass dbClass=DbClass.instance;
 
   void updateData(int id) async {
     isLoading.value = true;

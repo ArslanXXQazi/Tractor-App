@@ -11,7 +11,6 @@ class InsertController extends GetxController
   TextEditingController timeController=TextEditingController();
   TextEditingController priceController=TextEditingController();
   TextEditingController totalPriceController=TextEditingController();
-  TextEditingController dateController=TextEditingController();
   TextEditingController descriptionController=TextEditingController();
 
   var isLoading = false.obs;
