@@ -89,12 +89,12 @@ DbClass dbClass=DbClass.instance;
               CustomTextFormField(
                   text: "Name",
                   hintText: "Enter Name",
-                  controller: updateController.nameController
+                  controller: nameController
               ),
               CustomTextFormField(
                   text: "Time",
                   hintText: "Enter Time",
-                  controller: updateController.timeController
+                  controller: timeController
               ),
               Row(children: [
                 Expanded(child:  CustomTextFormField(
