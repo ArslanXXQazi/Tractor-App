@@ -96,7 +96,7 @@ class _FetchViewState extends State<FetchView> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                      BoldText(text: "Customar Name : ",fontSize: 16,),
+                      BoldText(text: "Customar Name : ",fontSize: 15,),
                       CustomText(text: data[index].customar_name??""),
                     ],),
                       SizedBox(height: height*.01,),
