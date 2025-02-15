@@ -5,6 +5,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:tractor/src/controller/components/custom_Text.dart';
 import 'package:tractor/src/controller/components/custom_button.dart';
 import 'package:tractor/src/controller/components/custom_text_form_field.dart';
+import 'package:tractor/src/dbhelper/dbhelper.dart';
 import 'package:tractor/src/views/insert_view/insert_controller.dart';
 import 'package:tractor/src/views/update_view/update_controller.dart';
 
@@ -52,10 +53,12 @@ class _UpdateViewState extends State<UpdateView> {
     descriptionController.text=widget.description;
 
   }
-
+DbClass dbClass=DbClass.instance;
   updateData()
   async{
-
+  await dbClass.updateData(
+      id: widget.id,
+      model: )
   }
 
   Widget build(BuildContext context) {
