@@ -113,11 +113,11 @@ DbClass dbClass=DbClass.instance;
                   text: "Description",
                   hintText: "Descriptions...",
                   maxLines: 3,
-                  controller: updateController.descriptionController),
+                  controller: descriptionController),
               SizedBox(height: height*.02,),
               CustomButton(
                   onTap: (){
-                    updateController.updateData(widget.id);
+                   
                   },
                   text: "Update Data")
             ],),
