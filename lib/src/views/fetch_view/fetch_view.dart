@@ -88,7 +88,7 @@ class _FetchViewState extends State<FetchView> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        BoldText(text: "Date : ",fontSize: 18,),
+                        BoldText(text: "Date : ",fontSize: 16,),
                         CustomText(text: DateTimeHelper.formatDateTime(data[index].date ?? ""),fontSize: 18,color: Colors.blueAccent,),
                       ],
                     ),
