@@ -100,7 +100,7 @@ DbClass dbClass=DbClass.instance;
                 Expanded(child:  CustomTextFormField(
                     text: "Price",
                     hintText: "Enter Price",
-                    controller: updateController.priceController
+                    controller: priceController
                 ),),
                 SizedBox(width: width*.02,),
                 Expanded(child:  CustomTextFormField(
