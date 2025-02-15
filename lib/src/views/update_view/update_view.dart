@@ -66,6 +66,7 @@ DbClass dbClass=DbClass.instance;
           total_price: totalPriceController.text,
           description: descriptionController.text,
       ) );
+  Navigator.pop(context);
   }
 
   Widget build(BuildContext context) {
