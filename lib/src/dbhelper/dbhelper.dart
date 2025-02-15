@@ -78,4 +78,35 @@ class DbClass{
     return await db.delete('tractor', where: 'id=?', whereArgs: [id]);
   }
 
+  Future<int> updateData({required int id,required MainModel model}) async {
+    Database db = await instance.database;
+    final data = {
+      'customar_name': model.customar_name,
+      'time'        :model.time,
+      'price'       :model.price,
+      'total_price' :model.total_price,
+      'description' :model.description,
+      'date'        :model.date??DateTime.now().toString(),
+    };
+
+    int result = await db.update(
+      'tractor',
+      data,
+      where: 'id = ?',
+      whereArgs: [id],
+    );
+
+    if (result > 0) {
+      print('Data Updated Successfully');
+    } else {
+      print('Data Update Failed');
+    }
+
+    return result;
+  }
+
+
+
+
+
 }
