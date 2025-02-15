@@ -123,9 +123,14 @@ class _FetchViewState extends State<FetchView> {
                       SizedBox(height: height*.01,),
                       Row(
                         children: [
-                          BoldText(text: "Descriptions : ",fontSize: 16,),
+                          BoldText(text: "Descriptions : ",fontSize: 15,),
                         ],),
-                      CustomText(text: data[index].description??""),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          CustomText(text: data[index].description??""),
+                        ],
+                      ),
 
                     // CustomText(text: DateTimeHelper.formatDateTime(data[index].date ?? "")),
                     // CustomText(text: data[index].customar_name??""),
