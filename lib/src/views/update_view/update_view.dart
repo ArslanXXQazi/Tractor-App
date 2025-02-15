@@ -57,14 +57,9 @@ class UpdateView extends StatelessWidget {
                   maxLines: 3,
                   controller: insertController.descriptionController),
               SizedBox(height: height*.02,),
-              Obx((){
-                return insertController.isLoading.value?Center(child: CircularProgressIndicator()):
-                CustomButton(
-                    onTap: (){
-                      insertController.insertData();
-                    },
-                    text: 'Add data');
-              })
+              CustomButton(
+                  onTap: (){},
+                  text: "Update Data")
             ],),
         ),
       ),
