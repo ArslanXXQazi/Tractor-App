@@ -53,7 +53,10 @@ class _UpdateViewState extends State<UpdateView> {
 
   }
 
-  
+  updateData()
+  async{
+
+  }
 
   Widget build(BuildContext context) {
     final height= MediaQuery.sizeOf(context).height;
