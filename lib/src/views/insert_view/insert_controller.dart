@@ -33,7 +33,7 @@ class InsertController extends GetxController
             time: timeController.text,
             price: priceController.text,
             total_price: totalPriceController.text,
-            description: descriptionController.text
+            description: descriptionController.text,
         );
 
         int check= await dbClass.modelCreate(model);
@@ -50,6 +50,7 @@ class InsertController extends GetxController
             timeController.clear();
             priceController.clear();
             totalPriceController.clear();
+            descriptionController.clear();
 
           }
         else
