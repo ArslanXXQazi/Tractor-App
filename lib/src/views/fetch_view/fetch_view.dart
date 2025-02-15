@@ -75,7 +75,12 @@ class _FetchViewState extends State<FetchView> {
                   context: context,
                   builder: (BuildContext context){
                     return AlertDialog(
-                      
+                      title: BoldText(text: 'Are you sure to want these changes',fontSize: 15,),
+                      actions: [
+                        Row(children: [
+                          Expanded(child: )
+                        ],)
+                      ],
                     );
                   }
               );

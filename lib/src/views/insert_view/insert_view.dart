@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:tractor/src/controller/components/custom_Text.dart';
-import 'package:tractor/src/controller/custom_text_form_field.dart';
+import 'package:tractor/src/controller/components/custom_text_form_field.dart';
 import 'package:tractor/src/views/insert_view/insert_controller.dart';
 
 class InsertView extends StatelessWidget {
