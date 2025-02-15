@@ -43,6 +43,8 @@ class _UpdateViewState extends State<UpdateView> {
   TextEditingController totalPriceController= TextEditingController();
   TextEditingController descriptionController=TextEditingController();
 
+  bool isLoading = false;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -57,6 +59,9 @@ class _UpdateViewState extends State<UpdateView> {
 DbClass dbClass=DbClass.instance;
   updateData()
   async{
+    setState(() {
+      isLoading = true;
+    });
   await dbClass.updateData(
       id: widget.id,
       model:MainModel(
@@ -66,6 +71,9 @@ DbClass dbClass=DbClass.instance;
           total_price: totalPriceController.text,
           description: descriptionController.text,
       ) );
+    setState(() {
+      isLoading = false;
+    });
   Navigator.pop(context,true);
   }
 
@@ -115,11 +123,11 @@ DbClass dbClass=DbClass.instance;
                   maxLines: 3,
                   controller: descriptionController),
               SizedBox(height: height*.02,),
-              CustomButton(
-                  onTap: (){
+             isLoading==true?Center(child: CircularProgressIndicator(),):CustomButton(
+                 onTap: (){
                    updateData();
-                  },
-                  text: "Update Data")
+                 },
+                 text: "Update Data")
             ],),
         ),
       ),
