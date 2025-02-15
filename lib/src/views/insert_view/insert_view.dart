@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:tractor/src/controller/components/custom_Text.dart';
+import 'package:tractor/src/controller/components/custom_button.dart';
 import 'package:tractor/src/controller/components/custom_text_form_field.dart';
 import 'package:tractor/src/views/insert_view/insert_controller.dart';
 
@@ -58,19 +59,11 @@ class InsertView extends StatelessWidget {
               SizedBox(height: height*.02,),
               Obx((){
                 return insertController.isLoading.value?Center(child: CircularProgressIndicator()):
-                ElevatedButton(
-                    onPressed: ()
-                    {
+                CustomButton(
+                    onTap: (){
                       insertController.insertData();
                     },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: CupertinoColors.activeGreen,
-                      minimumSize: Size(width*1, height*.07),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    child: BoldText(text: 'Add Data',color: Colors.white,));
+                    text: 'Add data');
               })
           ],),
         ),
