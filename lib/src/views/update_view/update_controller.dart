@@ -15,7 +15,7 @@ class UpdateController extends GetxController
   TextEditingController descriptionController=TextEditingController();
 
   var isLoading = false.obs;
-
+  
   void updateData(int id) async {
     isLoading.value = true;
 
