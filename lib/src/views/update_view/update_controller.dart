@@ -7,15 +7,16 @@ import 'package:tractor/src/model/main_model.dart';
 class UpdateController extends GetxController
 {
 
-  TextEditingController nameController=TextEditingController();
-  TextEditingController timeController=TextEditingController();
-  TextEditingController priceController=TextEditingController();
-  TextEditingController totalPriceController=TextEditingController();
-  TextEditingController dateController=TextEditingController();
+  TextEditingController nameController=       TextEditingController();
+  TextEditingController timeController=       TextEditingController();
+  TextEditingController priceController=      TextEditingController();
+  TextEditingController totalPriceController= TextEditingController();
+  TextEditingController dateController=       TextEditingController();
   TextEditingController descriptionController=TextEditingController();
 
   var isLoading = false.obs;
-  
+
+
   void updateData(int id) async {
     isLoading.value = true;
 
