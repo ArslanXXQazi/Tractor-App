@@ -6,6 +6,7 @@ import 'package:tractor/src/controller/components/custom_Text.dart';
 import 'package:tractor/src/controller/components/custom_button.dart';
 import 'package:tractor/src/controller/components/custom_text_form_field.dart';
 import 'package:tractor/src/dbhelper/dbhelper.dart';
+import 'package:tractor/src/model/main_model.dart';
 import 'package:tractor/src/views/insert_view/insert_controller.dart';
 import 'package:tractor/src/views/update_view/update_controller.dart';
 
@@ -58,7 +59,13 @@ DbClass dbClass=DbClass.instance;
   async{
   await dbClass.updateData(
       id: widget.id,
-      model: )
+      model:MainModel(
+          customar_name: nameController.text,
+          time: timeController.text,
+          price: priceController.text,
+          total_price: totalPriceController.text,
+          description: descriptionController.text,
+      ) );
   }
 
   Widget build(BuildContext context) {
