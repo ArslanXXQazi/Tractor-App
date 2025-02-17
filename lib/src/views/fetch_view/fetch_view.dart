@@ -1,7 +1,9 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tractor/src/controller/components/custom_Text.dart';
 import 'package:tractor/src/controller/components/custom_button.dart';
 import 'package:tractor/src/date_time_helper/date_time_helper.dart';
@@ -127,7 +129,21 @@ class _FetchViewState extends State<FetchView> {
                   padding:  EdgeInsets.symmetric(horizontal: width*.02,vertical: height*.02),
                   child: Column(
                     children: [
-                    BoldText(text: 'Customar Detail',fontSize: 18,),
+                      AnimatedTextKit(
+                        animatedTexts: [
+                          TypewriterAnimatedText(
+                            "Customar Detail",
+                            textStyle: GoogleFonts.merriweather(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16
+                            ),
+                           speed:Duration(microseconds: 90000)
+                          ),
+                        ],
+                        totalRepeatCount: 100,
+                        pause: const Duration(milliseconds: 1000),
+                      ),
+                    //BoldText(text: 'Customar Detail',fontSize: 18,).,
                       SizedBox(height: height*.03,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

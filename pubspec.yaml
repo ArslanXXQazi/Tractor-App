@@ -39,6 +39,7 @@ dependencies:
   sqflite: ^2.4.1
   path_provider:
   intl:
+  animated_text_kit: ^4.2.3
 
 
 dev_dependencies:
