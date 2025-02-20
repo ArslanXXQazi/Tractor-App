@@ -227,7 +227,7 @@ class _FetchViewState extends State<FetchView> {
             ),
           );
         },
-      ).animate().shimmer(duration: Duration(seconds: 2)),
+      ).animate().saturate(duration: Duration(seconds: 2)),
     );
   }
 }
