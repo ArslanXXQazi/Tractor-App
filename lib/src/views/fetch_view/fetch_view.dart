@@ -188,6 +188,7 @@ class _FetchViewState extends State<FetchView> {
                         children: [
                           BoldText(text: "Descriptions : ",fontSize: 15,),
                         ],),
+                      Divider(),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
