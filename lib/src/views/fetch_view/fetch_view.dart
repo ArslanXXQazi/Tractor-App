@@ -143,6 +143,10 @@ class _FetchViewState extends State<FetchView> {
                         totalRepeatCount: 100,
                         pause: const Duration(milliseconds: 1000),
                       ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal:width*.2),
+                        child: Divider(),
+                      ),
                       SizedBox(height: height*.03,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
