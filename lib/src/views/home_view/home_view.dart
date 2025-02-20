@@ -31,7 +31,7 @@ class HomeView extends StatelessWidget {
                 },
                 iconData: Icons.remove_red_eye,
                 text: "View Your Data",
-                color: Colors.blue,
+              //  color: Colors.blue,
             ),
         ],),
       ),
