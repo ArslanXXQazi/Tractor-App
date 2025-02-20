@@ -40,7 +40,7 @@ dependencies:
   path_provider:
   intl:
   animated_text_kit: ^4.2.3
-
+  flutter_animate: ^4.5.2
 
 dev_dependencies:
   flutter_test:

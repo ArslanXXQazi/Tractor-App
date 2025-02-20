@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -163,7 +164,7 @@ class _FetchViewState extends State<FetchView> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         BoldText(text: "Date : ",fontSize: 16,color: Colors.white,),
-                        CustomText(text: DateTimeHelper.formatDateTime(data[index].date ?? ""),fontSize: 18,color: Colors.black,),
+                        BoldText(text: DateTimeHelper.formatDateTime(data[index].date ?? ""),fontSize: 18,color: Colors.black,),
                       ],
                     ),
                     Divider(),
@@ -223,7 +224,7 @@ class _FetchViewState extends State<FetchView> {
             ),
           );
         },
-      ),
+      ).animate().scale(duration: Duration(seconds: 1)),
     );
   }
 }
