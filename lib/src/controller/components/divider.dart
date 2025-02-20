@@ -8,7 +8,8 @@ class Divider extends StatelessWidget {
     final height= MediaQuery.sizeOf(context).height;
     final width= MediaQuery.sizeOf(context).width;
     return Container(
-      height: ,
+      height: height*002,
+      
     );
   }
 }
