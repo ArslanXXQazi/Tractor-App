@@ -27,7 +27,7 @@ class HomeContainer extends StatelessWidget {
               Color(0xFF2575FC), // Vibrant Blue
               Color(0xFF00C9FF), // Light Sky Blue
               Color(0xFF00FFA3), // Neon Green
-              Color(0xFFFFD700), // Gold// Indigo Deep Indigo
+              Color(0xFFFFD700), // Gold// Gold// Indigo Deep Indigo
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
