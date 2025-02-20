@@ -124,10 +124,11 @@ class _FetchViewState extends State<FetchView> {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Colors.red.shade900, // Deep Blue
-                      Colors.blue.shade500, // Medium Blue
-                      Colors.green.shade300, // Light Blue
-                    Colors.yellow.shade900,
+                      Colors.purple.shade900,  // Deep Purple
+                      Colors.blue.shade700,    // Royal Blue
+                      Colors.cyan.shade500,    // Vibrant Cyan
+                      Colors.green.shade400,   // Fresh Green
+                      Colors.yellow.shade300,  // Warm Yellow
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
