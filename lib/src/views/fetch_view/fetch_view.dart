@@ -151,6 +151,7 @@ class _FetchViewState extends State<FetchView> {
                         CustomText(text: DateTimeHelper.formatDateTime(data[index].date ?? ""),fontSize: 18,color: Colors.blueAccent,),
                       ],
                     ),
+                    Divider(),
                     SizedBox(height: height*.01,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
