@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:tractor/src/controller/components/custom_Text.dart';
@@ -65,7 +66,7 @@ class InsertView extends StatelessWidget {
                     },
                     text: 'Add data');
               })
-          ],),
+          ],).animate().slideY(duration: Duration(seconds: 2)),
         ),
       ),
     );
