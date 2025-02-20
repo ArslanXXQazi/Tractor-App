@@ -159,6 +159,7 @@ class _FetchViewState extends State<FetchView> {
                       BoldText(text: "Customar Name : ",fontSize: 15,),
                       CustomText(text: data[index].customar_name??""),
                     ],),
+                      Divider(),
                       SizedBox(height: height*.01,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -166,6 +167,7 @@ class _FetchViewState extends State<FetchView> {
                       BoldText(text: "Time : ",fontSize: 15,),
                       CustomText(text: data[index].time??""),
                     ],),
+                      Divider(),
                       SizedBox(height: height*.01,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
