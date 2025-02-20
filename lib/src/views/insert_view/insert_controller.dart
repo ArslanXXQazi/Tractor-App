@@ -4,6 +4,7 @@ import 'package:elegant_notification/resources/arrays.dart';
 import 'package:elegant_notification/resources/stacked_options.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tractor/src/controller/components/custom_Text.dart';
 import 'package:tractor/src/dbhelper/dbhelper.dart';
 import 'package:tractor/src/model/main_model.dart';
 
@@ -67,7 +68,7 @@ class InsertController extends GetxController
       }
     else
       {
-        ElegantNotification.success(
+        ElegantNotification.error(
           width: 360,
           isDismissable: false,
           animationCurve: Curves.easeOut, // Smooth transition
@@ -79,16 +80,11 @@ class InsertController extends GetxController
           ),
           position: Alignment.topCenter,
           animation: AnimationType.fromTop,
-          title: Text('Warning'),
-          description: Text('Please fill all fields'),
+          title: BoldText(text: 'Warning',color: Colors.red,fontSize: 16,),
+          description: CustomText(text: 'Please fill all fields'),
           onDismiss: () {},
           onNotificationPressed: () {},
         ).show(Get.overlayContext ?? Get.context!);
-        // Get.snackbar("Warning", "Please fill all fields",
-        //     snackPosition: SnackPosition.TOP,
-        //     duration: Duration(seconds: 2),
-        //     backgroundColor: Colors.orange,
-        //     colorText: Colors.white);
       }
   }
 
