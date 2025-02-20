@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:tractor/src/controller/components/custom_Text.dart';
 import 'package:tractor/src/controller/components/home_container.dart';
 import 'package:tractor/src/views/fetch_view/fetch_view.dart';
@@ -33,7 +34,7 @@ class HomeView extends StatelessWidget {
                 text: "View Your Data",
                 color: Colors.blue,
             ),
-        ],),
+        ],).animate().scale(duration: Duration(seconds: 1)),
       ),
     );
   }

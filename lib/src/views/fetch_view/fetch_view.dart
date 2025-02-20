@@ -1,4 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:elegant_notification/elegant_notification.dart';
+import 'package:elegant_notification/resources/arrays.dart';
+import 'package:elegant_notification/resources/stacked_options.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -89,6 +92,23 @@ class _FetchViewState extends State<FetchView> {
                             dbClass.deleteData(data[index].id!);
                             setState(() {
                               data.removeAt(index);
+                              ElegantNotification.error(
+                                width: width*.92,
+                                isDismissable: false,
+                                animationCurve: Curves.easeOut, // Smooth transition
+                                animationDuration: Duration(milliseconds: 500), // Slow animation
+                                stackedOptions: StackedOptions(
+                                  key: 'top',
+                                  type: StackedType.same,
+                                  itemOffset: Offset(0, 5), // Smooth offset
+                                ),
+                                position: Alignment.topCenter,
+                                animation: AnimationType.fromTop,
+                                title: Text('Delete'),
+                                description: Text('Your data has been Deleted'),
+                                onDismiss: () {},
+                                onNotificationPressed: () {},
+                              ).show(context);
                             });
                           },
                             text: 'Delete',
@@ -227,7 +247,7 @@ class _FetchViewState extends State<FetchView> {
             ),
           );
         },
-      ).animate().saturate(duration: Duration(seconds: 2)),
+      ).animate().shimmer(duration: Duration(seconds: 3)),
     );
   }
 }

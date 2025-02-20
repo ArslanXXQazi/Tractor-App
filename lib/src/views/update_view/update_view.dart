@@ -1,5 +1,9 @@
+import 'package:elegant_notification/elegant_notification.dart';
+import 'package:elegant_notification/resources/arrays.dart';
+import 'package:elegant_notification/resources/stacked_options.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:tractor/src/controller/components/custom_Text.dart';
@@ -126,9 +130,26 @@ DbClass dbClass=DbClass.instance;
              isLoading==true?Center(child: CircularProgressIndicator(),):CustomButton(
                  onTap: (){
                    updateData();
+                   ElegantNotification.success(
+                     width: width*.92,
+                     isDismissable: false,
+                     animationCurve: Curves.easeOut, // Smooth transition
+                     animationDuration: Duration(milliseconds: 500), // Slow animation
+                     stackedOptions: StackedOptions(
+                       key: 'top',
+                       type: StackedType.same,
+                       itemOffset: Offset(0, 5), // Smooth offset
+                     ),
+                     position: Alignment.topCenter,
+                     animation: AnimationType.fromTop,
+                     title: Text('Update'),
+                     description: Text('Your data has been updated'),
+                     onDismiss: () {},
+                     onNotificationPressed: () {},
+                   ).show(context);
                  },
                  text: "Update Data")
-            ],),
+            ],).animate().slideY(duration: Duration(seconds: 1)),
         ),
       ),
     );

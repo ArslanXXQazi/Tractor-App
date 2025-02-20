@@ -1,4 +1,7 @@
 
+import 'package:elegant_notification/elegant_notification.dart';
+import 'package:elegant_notification/resources/arrays.dart';
+import 'package:elegant_notification/resources/stacked_options.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tractor/src/dbhelper/dbhelper.dart';
@@ -40,10 +43,10 @@ class InsertController extends GetxController
         if(check==1)
           {
            // print('snacake sscschsbcsvcjdc');
-            Get.snackbar("Success", "Data inserted successfully!",
-                snackPosition: SnackPosition.TOP,
-                backgroundColor: Colors.green,
-                colorText: Colors.white);
+           //  Get.snackbar("Success", "Data inserted successfully!",
+           //      snackPosition: SnackPosition.TOP,
+           //      backgroundColor: Colors.green,
+           //      colorText: Colors.white);
 
             nameController.clear();
             timeController.clear();
@@ -64,11 +67,28 @@ class InsertController extends GetxController
       }
     else
       {
-        Get.snackbar("Warning", "Please fill all fields",
-            snackPosition: SnackPosition.TOP,
-            duration: Duration(seconds: 2),
-            backgroundColor: Colors.orange,
-            colorText: Colors.white);
+        ElegantNotification.success(
+          width: 360,
+          isDismissable: false,
+          animationCurve: Curves.easeOut, // Smooth transition
+          animationDuration: Duration(milliseconds: 500), // Slow animation
+          stackedOptions: StackedOptions(
+            key: 'top',
+            type: StackedType.same,
+            itemOffset: Offset(0, 5), // Smooth offset
+          ),
+          position: Alignment.topCenter,
+          animation: AnimationType.fromTop,
+          title: Text('Warning'),
+          description: Text('Please fill all fields'),
+          onDismiss: () {},
+          onNotificationPressed: () {},
+        ).show(Get.overlayContext ?? Get.context!);
+        // Get.snackbar("Warning", "Please fill all fields",
+        //     snackPosition: SnackPosition.TOP,
+        //     duration: Duration(seconds: 2),
+        //     backgroundColor: Colors.orange,
+        //     colorText: Colors.white);
       }
   }
 

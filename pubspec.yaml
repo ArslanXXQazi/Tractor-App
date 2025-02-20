@@ -41,6 +41,8 @@ dependencies:
   intl:
   animated_text_kit: ^4.2.3
   flutter_animate: ^4.5.2
+  elegant_notification: ^2.4.1
+  flutter_launcher_icons: ^0.14.3
 
 dev_dependencies:
   flutter_test:
