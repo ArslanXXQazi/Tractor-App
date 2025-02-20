@@ -143,7 +143,6 @@ class _FetchViewState extends State<FetchView> {
                         totalRepeatCount: 100,
                         pause: const Duration(milliseconds: 1000),
                       ),
-                    //BoldText(text: 'Customar Detail',fontSize: 18,).,
                       SizedBox(height: height*.03,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
