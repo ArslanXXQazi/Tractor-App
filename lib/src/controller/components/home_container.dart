@@ -23,11 +23,11 @@ class HomeContainer extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color(0xFF6A11CB), // Rich Purple
-              Color(0xFF2575FC), // Vibrant Blue
-              Color(0xFF00C9FF), // Light Sky Blue
-              Color(0xFF00FFA3), // Neon Green
-              Color(0xFFFFD700), // Gold// Gold// Indigo Deep Indigo
+              Color(0xFFFF00F6), // Neon Pink
+              Color(0xFFFFA500), // Bright Orange
+              Color(0xFF00FF00), // Neon Green
+              Color(0xFF00FFFF), // Cyan Glow
+              Color(0xFF0000FF), // Electric Blue
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
