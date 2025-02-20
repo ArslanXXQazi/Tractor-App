@@ -10,6 +10,7 @@ class Divider extends StatelessWidget {
     return Container(
       height: height*002,
       width: width*1,
+      color: Colors.red,
     );
   }
 }
