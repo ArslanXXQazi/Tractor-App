@@ -175,6 +175,7 @@ class _FetchViewState extends State<FetchView> {
                       BoldText(text: "Price : ",fontSize: 15,),
                       CustomText(text: data[index].price??""),
                     ],),
+                      Divider(),
                       SizedBox(height: height*.01,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
