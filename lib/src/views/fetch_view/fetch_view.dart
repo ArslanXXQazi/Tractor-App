@@ -145,7 +145,8 @@ class _FetchViewState extends State<FetchView> {
                             "Customar Detail",
                             textStyle: GoogleFonts.merriweather(
                               fontWeight: FontWeight.bold,
-                              fontSize: 16
+                              fontSize: 16,
+                              color: Colors.white
                             ),
                            speed:Duration(microseconds: 90000)
                           ),
@@ -161,8 +162,8 @@ class _FetchViewState extends State<FetchView> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        BoldText(text: "Date : ",fontSize: 16,),
-                        CustomText(text: DateTimeHelper.formatDateTime(data[index].date ?? ""),fontSize: 18,color: Colors.blueAccent,),
+                        BoldText(text: "Date : ",fontSize: 16,color: Colors.white,),
+                        CustomText(text: DateTimeHelper.formatDateTime(data[index].date ?? ""),fontSize: 18,color: Colors.black,),
                       ],
                     ),
                     Divider(),
@@ -170,7 +171,7 @@ class _FetchViewState extends State<FetchView> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                      BoldText(text: "Customar Name : ",fontSize: 15,),
+                      BoldText(text: "Customar Name : ",fontSize: 15,color: Colors.white,),
                       CustomText(text: data[index].customar_name??""),
                     ],),
                       Divider(),
