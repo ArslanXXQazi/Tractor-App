@@ -139,21 +139,24 @@ class _FetchViewState extends State<FetchView> {
                 child: Padding(
                   padding:  EdgeInsets.symmetric(horizontal: width*.02,vertical: height*.02),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      AnimatedTextKit(
-                        animatedTexts: [
-                          TypewriterAnimatedText(
-                            "Customar Detail",
-                            textStyle: GoogleFonts.merriweather(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                              color: Colors.white
+                      Center(
+                        child: AnimatedTextKit(
+                          animatedTexts: [
+                            TypewriterAnimatedText(
+                              "Customar Detail",
+                              textStyle: GoogleFonts.merriweather(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                                color: Colors.white
+                              ),
+                             speed:Duration(microseconds: 90000)
                             ),
-                           speed:Duration(microseconds: 90000)
-                          ),
-                        ],
-                        totalRepeatCount: 100,
-                        pause: const Duration(milliseconds: 1000),
+                          ],
+                          totalRepeatCount: 100,
+                          pause: const Duration(milliseconds: 1000),
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal:width*.2),

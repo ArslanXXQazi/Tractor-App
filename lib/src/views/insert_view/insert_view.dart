@@ -64,9 +64,9 @@ class InsertView extends StatelessWidget {
                     onTap: (){
                       insertController.insertData();
                     },
-                    text: 'Add data');
+                    text: 'Add data').animate().shimmer(duration: Duration(seconds: 5.remainder(10)));
               })
-          ],).animate().slideY(duration: Duration(seconds: 2)),
+          ],).animate().slideY(duration: Duration(seconds: 1)),
         ),
       ),
     );
