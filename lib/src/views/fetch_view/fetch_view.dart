@@ -172,43 +172,43 @@ class _FetchViewState extends State<FetchView> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                       BoldText(text: "Customar Name : ",fontSize: 15,color: Colors.white,),
-                      CustomText(text: data[index].customar_name??""),
+                      CustomText(text: data[index].customar_name??"",color: Colors.white,),
                     ],),
                       Divider(),
                       SizedBox(height: height*.01,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                      BoldText(text: "Time : ",fontSize: 15,),
-                      CustomText(text: data[index].time??""),
+                      BoldText(text: "Time : ",fontSize: 15,color: Colors.white),
+                      CustomText(text: data[index].time??"",color: Colors.white),
                     ],),
                       Divider(),
                       SizedBox(height: height*.01,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                      BoldText(text: "Price : ",fontSize: 15,),
-                      CustomText(text: data[index].price??""),
+                      BoldText(text: "Price : ",fontSize: 15,color: Colors.white),
+                      CustomText(text: data[index].price??"",color: Colors.white),
                     ],),
                       Divider(),
                       SizedBox(height: height*.01,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                      BoldText(text: "Total Price : ",fontSize: 15,),
-                      CustomText(text: data[index].total_price??""),
+                      BoldText(text: "Total Price : ",fontSize: 15,color: Colors.white),
+                      CustomText(text: data[index].total_price??"",color: Colors.white),
                     ],),
                       Divider(),
                       SizedBox(height: height*.01,),
                       Row(
                         children: [
-                          BoldText(text: "Descriptions : ",fontSize: 15,),
+                          BoldText(text: "Descriptions : ",fontSize: 15,color: Colors.white),
                         ],),
                       Divider(),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          CustomText(text: data[index].description??""),
+                          CustomText(text: data[index].description??"",color: Colors.white),
                         ],
                       ),
 
