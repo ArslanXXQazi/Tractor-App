@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class Divider extends StatelessWidget {
   const Divider({super.key});
@@ -8,9 +9,9 @@ class Divider extends StatelessWidget {
     final height= MediaQuery.sizeOf(context).height;
     final width= MediaQuery.sizeOf(context).width;
     return Container(
-      height: height*002,
+      height: height*005,
       width: width*1,
-      color: Colors.red,
+      color: Colors.yellow,
     );
   }
 }
