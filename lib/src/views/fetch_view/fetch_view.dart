@@ -122,7 +122,9 @@ class _FetchViewState extends State<FetchView> {
               child: Container(
                 width: width*1,
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
+                 gradient: LinearGradient(colors: [
+                  
+                 ]),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Padding(
