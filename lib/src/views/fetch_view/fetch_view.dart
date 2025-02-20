@@ -61,9 +61,9 @@ class _FetchViewState extends State<FetchView> {
     final height = MediaQuery.sizeOf(context).height;
     final width = MediaQuery.sizeOf(context).width;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFEFEFEF),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFEFEFEF),
         centerTitle: true,
         title: BoldText(text: 'Customar Detail'),
       ),
