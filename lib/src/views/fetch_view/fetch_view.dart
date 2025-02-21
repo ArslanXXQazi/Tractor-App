@@ -93,7 +93,7 @@ class _FetchViewState extends State<FetchView> {
                             setState(() {
                               data.removeAt(index);
                               ElegantNotification.error(
-                                width: width*.92,
+                                width: 360,
                                 isDismissable: false,
                                 animationCurve: Curves.easeOut, // Smooth transition
                                 animationDuration: Duration(milliseconds: 500), // Slow animation
@@ -104,11 +104,11 @@ class _FetchViewState extends State<FetchView> {
                                 ),
                                 position: Alignment.topCenter,
                                 animation: AnimationType.fromTop,
-                                title: Text('Delete'),
-                                description: Text('Your data has been Deleted'),
+                                title: BoldText(text: 'Deleted',color: Colors.red,fontSize: 16,),
+                                description: CustomText(text: 'Data Deleted successfully!'),
                                 onDismiss: () {},
                                 onNotificationPressed: () {},
-                              ).show(context);
+                              ).show(Get.overlayContext ?? Get.context!);
                             });
                           },
                             text: 'Delete',

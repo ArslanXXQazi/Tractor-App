@@ -131,7 +131,7 @@ DbClass dbClass=DbClass.instance;
                  onTap: (){
                    updateData();
                    ElegantNotification.success(
-                     width: width*.92,
+                     width: 360,
                      isDismissable: false,
                      animationCurve: Curves.easeOut, // Smooth transition
                      animationDuration: Duration(milliseconds: 500), // Slow animation
@@ -142,11 +142,11 @@ DbClass dbClass=DbClass.instance;
                      ),
                      position: Alignment.topCenter,
                      animation: AnimationType.fromTop,
-                     title: Text('Update'),
-                     description: Text('Your data has been updated'),
+                     title: BoldText(text: 'Updated',color: Colors.green,fontSize: 16,),
+                     description: CustomText(text: 'Data Updated successfully!'),
                      onDismiss: () {},
                      onNotificationPressed: () {},
-                   ).show(context);
+                   ).show(Get.overlayContext ?? Get.context!);
                  },
                  text: "Update Data")
             ],).animate().slideY(duration: Duration(seconds: 1)),

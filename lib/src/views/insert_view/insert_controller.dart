@@ -43,12 +43,23 @@ class InsertController extends GetxController
         isLoading.value=false;
         if(check==1)
           {
-           // print('snacake sscschsbcsvcjdc');
-           //  Get.snackbar("Success", "Data inserted successfully!",
-           //      snackPosition: SnackPosition.TOP,
-           //      backgroundColor: Colors.green,
-           //      colorText: Colors.white);
-
+            ElegantNotification.success(
+              width: 360,
+              isDismissable: false,
+              animationCurve: Curves.easeOut, // Smooth transition
+              animationDuration: Duration(milliseconds: 500), // Slow animation
+              stackedOptions: StackedOptions(
+                key: 'top',
+                type: StackedType.same,
+                itemOffset: Offset(0, 5), // Smooth offset
+              ),
+              position: Alignment.topCenter,
+              animation: AnimationType.fromTop,
+              title: BoldText(text: 'Success',color: Colors.green,fontSize: 16,),
+              description: CustomText(text: 'Data inserted successfully!'),
+              onDismiss: () {},
+              onNotificationPressed: () {},
+            ).show(Get.overlayContext ?? Get.context!);
             nameController.clear();
             timeController.clear();
             priceController.clear();

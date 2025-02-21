@@ -26,7 +26,7 @@ class _SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(child: Image(image: AssetImage('assets/tractor1.png')),),
+      body: Center(child: Image(image: AssetImage('assets/tractor2.png')),),
     );
   }
 }
